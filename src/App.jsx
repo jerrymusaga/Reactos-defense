@@ -6,6 +6,7 @@ import MintNFT from "./components/MintNFT"
 import NFTDetail from "./components/NFTDetail"
 import ReactionsModal from "./components/ReactionsModal"
 import Transactions from "./components/Transactions"
+import UpdateNFT from "./components/UpdateNFT"
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <MintNFT />
       <NFTDetail />
       <ReactionsModal />
+      <UpdateNFT />
     </div>
   )
 }
