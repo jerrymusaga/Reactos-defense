@@ -2,6 +2,7 @@ import ArtWorks from "./components/ArtWorks"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
+import Loading from "./components/Loading"
 import MintNFT from "./components/MintNFT"
 import NFTDetail from "./components/NFTDetail"
 import ReactionsModal from "./components/ReactionsModal"
@@ -22,6 +23,7 @@ const App = () => {
       <NFTDetail />
       <ReactionsModal />
       <UpdateNFT />
+      <Loading />
     </div>
   )
 }
