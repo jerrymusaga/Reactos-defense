@@ -1,6 +1,6 @@
 import logo from '../components/logo192.png'
 
-const Footer = () => {
+export default const Footer = () => {
   return (
     <div className='w-full flex flex-col justify-between md:justify-center items-center p-4 gradient-bg-footer'>
         <div className='w-full flex sm:flex-row flex-col justify-between items-center my-4'>
@@ -20,5 +20,3 @@ const Footer = () => {
     </div>
   )
 }
-
-export default Footer
