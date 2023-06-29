@@ -1,3 +1,4 @@
+import Alert from "./components/Alert"
 import ArtWorks from "./components/ArtWorks"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
@@ -24,6 +25,8 @@ const App = () => {
       <ReactionsModal />
       <UpdateNFT />
       <Loading />
+      <Alert />
+      
     </div>
   )
 }
