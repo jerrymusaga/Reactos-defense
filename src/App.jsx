@@ -3,6 +3,8 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import MintNFT from "./components/MintNFT"
+import NFTDetail from "./components/NFTDetail"
+import ReactionsModal from "./components/ReactionsModal"
 import Transactions from "./components/Transactions"
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
       <Transactions />
       <Footer />
       <MintNFT />
+      <NFTDetail />
+      <ReactionsModal />
     </div>
   )
 }
