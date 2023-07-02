@@ -93,7 +93,7 @@ contract ReactosNFTMarketplace is ERC721Enumerable, Ownable {
         require(msg.value >= minted[id - 1].cost, "BnB too low for purchase!");
         require(msg.sender != minted[id - 1].owner, "Operation Not Allowed!");
 
-        uint256 royalty = (msg.value * royalityFee) / 100;
+        uint256 royalty = (msg.value * royaltyFee) / 100;
         payTo(artist, royalty);
         payTo(minted[id - 1].owner, (msg.value - royalty));
 

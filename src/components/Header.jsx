@@ -1,7 +1,11 @@
 import React from 'react'
+import { truncate, useGlobalState } from '../store'
+import { connectWallet } from './Blockchain.Services'
 import logo from './logo192.png'
 
 const Header = () => {
+  const [connectedAccount] = useGlobalState('connectedAccount')
+
   return (
     <div className='w-4/5 flex justify-between md:justify-center items-center py-4 mx-auto'>
         <div className='md:flex-[0.5] flex-initial justify-center items-center'>
@@ -13,7 +17,13 @@ const Header = () => {
             <li className='mx-4 cursor-pointer'>Token</li>
             <li className='mx-4 cursor-pointer'>Community</li>
         </ul>
-        <button className='shadow-xl shadow-black text-white bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2 rounded-full '>Connect Wallet</button>
+        {
+          connectedAccount ? (
+            <button className='shadow-xl shadow-black text-white bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2 rounded-full '>{truncate(connectedAccount, 4,4,11)}</button>
+          ) : (
+            <button onClick={connectWallet} className='shadow-xl shadow-black text-white bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2 rounded-full '>Connect Wallet</button>
+          )
+        }
     </div>
   )
 }
